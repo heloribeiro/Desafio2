@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "e3f463d0-b26e-4a48-8bab-893948f6ef57",
+		"name": "Filmes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BuscaFilme",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Valida o status code\r",
+							"pm.test(\"Status code is 200\", \r",
+							"function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.omdbapi.com/?i=tt1285016&apikey=52ec71bf",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "tt1285016"
+						},
+						{
+							"key": "apikey",
+							"value": "52ec71bf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscaFilmeInexistente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.omdbapi.com/?i=tt1285000&apikey=52ec71gt",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "tt1285000"
+						},
+						{
+							"key": "apikey",
+							"value": "52ec71gt"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
